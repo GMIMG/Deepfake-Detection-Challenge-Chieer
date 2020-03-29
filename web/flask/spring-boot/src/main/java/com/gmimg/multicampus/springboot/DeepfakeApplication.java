@@ -8,7 +8,5 @@ public class DeepfakeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DeepfakeApplication.class, args);
-		//System.out.println("hello world");
 	}
-
 }

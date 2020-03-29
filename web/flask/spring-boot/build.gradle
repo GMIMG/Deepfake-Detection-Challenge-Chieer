@@ -1,8 +1,7 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-
 }
 
 // apply plugin: 'application'
@@ -13,6 +12,11 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '13'
 
 configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
@@ -26,6 +30,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
@@ -33,12 +40,16 @@ dependencies {
 	}
 
 
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+	// testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    // testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 
 	// testCompile 'org.junit.jupiter:junit-jupiter-params:5.3.1'
 
-    // testImplementation('org.springframework.boot:spring-boot-starter-test')
+    // compile 'javax.servlet:javax.servlet-api:3.1.0'
+
+	// jsp
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+	compile('javax.servlet:jstl:1.2')
 
 	
 }

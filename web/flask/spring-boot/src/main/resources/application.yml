@@ -5,13 +5,14 @@ spring:
     h2:
         console:
             enabled: true
-#     mvc:
-#         view:
-#             prefix: /jsp/
-#             suffix: .jsp
-#     output:
-#         ansi:
-#             enabled: always
+            path: /h2
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
+    output:
+        ansi:
+            enabled: always
 server:
     tomcat:
         uri-encoding: UTF-8
