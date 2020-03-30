@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 model = load_model('deepfake-detection2.h5')
 
-@app.route('/')
+@app.route('/predict')
 def predict():
     input_shape = (160,160,3)
     mtcnn = MTCNN()

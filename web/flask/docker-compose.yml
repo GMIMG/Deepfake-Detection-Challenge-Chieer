@@ -1,19 +1,32 @@
 version: '3'
 services:
   flask:
-      container_name: flask
-      image: "flask:test"
-      ports:
-       - "5000:5000"
-      networks:
-      - backend
+    container_name: flask
+    image: "flask:test"
+    ports:
+      - "5000:5000"
+    networks:
+    - backend
+
+
+
+  spring:
+    container_name: spring
+    image: "spring:test"
+    # build: .
+    ports:
+      - 8080:8080
+    networks:
+    - backend
+
+
   nginx:
-      container_name: nginx
-      image: "nginx:test"
-      ports:
-       - "80:80"
-      networks:
-       - backend
+    container_name: nginx
+    image: "nginx:test"
+    ports:
+      - "80:80"
+    networks:
+      - backend
 
 networks:
   backend:

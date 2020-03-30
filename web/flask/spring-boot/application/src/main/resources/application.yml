@@ -1,0 +1,23 @@
+spring:
+    http:
+        encoding:
+            charset: UTF-8
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
+    output:
+        ansi:
+            enabled: always
+server:
+    servlet:
+        context-path: /
+        session: 
+            timeout: 60
+    tomcat:
+        uri-encoding: UTF-8
+    port: 8080
