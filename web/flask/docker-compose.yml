@@ -2,6 +2,7 @@ version: '3'
 services:
   flask:
     container_name: flask
+    build: ./flask
     image: "flask:test"
     ports:
       - "5000:5000"
@@ -12,8 +13,8 @@ services:
 
   spring:
     container_name: spring
+    build: ./spring-boot
     image: "spring:test"
-    # build: .
     ports:
       - 8080:8080
     networks:
@@ -22,6 +23,7 @@ services:
 
   nginx:
     container_name: nginx
+    build: ./nginx
     image: "nginx:test"
     ports:
       - "80:80"
