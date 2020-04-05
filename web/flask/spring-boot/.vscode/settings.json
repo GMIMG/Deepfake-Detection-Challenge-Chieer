@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.home": "C:\\Program Files\\JAVA\\jdk-13",
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

@@ -46,6 +46,11 @@ git checkout "develop"
 # develop으로 merge
 git merge --no-ff "branch_name"
 git push origin develop
+
+# 전체 branch 보기
+git branch -a
+# tree 확인
+gitk
 ```
 
 
