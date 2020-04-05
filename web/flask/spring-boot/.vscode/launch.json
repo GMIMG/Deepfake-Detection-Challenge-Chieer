@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DeepfakeApplication<spring-boot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gmimg.multicampus.springboot.DeepfakeApplication",
+            "projectName": "spring-boot",
+            "args": ""
+        }
+    ]
+}
